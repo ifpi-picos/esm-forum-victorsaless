@@ -14,6 +14,8 @@
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Pergunta</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Remover</th>
             <th scope="col">Respostas</th>
           </tr>
         </thead>
@@ -22,6 +24,8 @@
           <tr>
             <th scope="row"><%= p.id_pergunta %></th>
             <td><%=p.texto%></td>
+            <td><a href="/perguntas/editar?id_pergunta=<%=p.id_pergunta%>">Editar</a></td>
+            <td><a href="/perguntas/?id_pergunta=<%=p.id_pergunta%>">Deletar</a></td>
             <td><a href="/respostas/?id_pergunta=<%=p.id_pergunta%>"><%=p.num_respostas%></a></td>
           </tr>        
           <% } %>

@@ -1,0 +1,14 @@
+<%- include('header.html') -%>
+
+<h5> Edite sua Pergunta </h5>
+  
+<section>
+  <form action="/pergunta" id="formo" method="post">
+  <input type="hidden" id="form" name="id_pergunta" value="<%=pergunta.id_pergunta%>">    
+</form>
+  <textarea rows="3" cols="50" name="novaPergunta" form="formo" ><%=pergunta.texto%></textarea><br>
+  <input type="submit" form="formo" value="Editar">
+
+</section>
+
+<%- include('footer.html') -%>
